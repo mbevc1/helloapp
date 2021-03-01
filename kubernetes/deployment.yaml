@@ -1,0 +1,23 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: helloapp
+  name: helloapp
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: helloapp
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: helloapp
+        version: v1
+    spec:
+      containers:
+      - image: mbevc1/helloapp:1.0.1
+        name: helloapp
+        ports:
+        - containerPort: 8080
