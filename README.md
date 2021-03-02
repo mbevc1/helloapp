@@ -21,7 +21,7 @@ cluster.
 
 ### Enpoints
 
-Application listens on port 8080 and has some ednpoints:
+Application listens on port 8080 and has some endpoints:
 * `/` - main Hello content
 * `/version` - version
 * `/health` - current health status
