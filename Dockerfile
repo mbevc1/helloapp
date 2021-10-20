@@ -1,5 +1,5 @@
 ARG VER=v1.0.1
-FROM golang:1.15.8
+FROM golang:1.16.8
 ARG VER
 WORKDIR /go/src/github.com/mbevc1/helloapp/
 COPY . .
