@@ -17,7 +17,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: mbevc1/helloapp:v1.0.1
+      - image: mbevc1/helloapp:v1.0.2
         name: helloapp
         ports:
         - containerPort: 8080
