@@ -28,8 +28,8 @@ jobs:
       run: |
         go mod tidy
         make vet
-        go get -u golang.org/x/lint/golint
-        make lint
+        #go get -u golang.org/x/lint/golint
+        #make lint
       if: success()
 
     - name: Test
