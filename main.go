@@ -8,8 +8,6 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	"github.com/go-redis/redis"
-	_ "github.com/go-sql-driver/mysql"
 	"log"
 	"net/http"
 	"os"
@@ -17,12 +15,16 @@ import (
 	"strconv"
 	"strings"
 	"syscall"
+
+	"github.com/go-redis/redis"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 const (
 	version = "v1.0.0"
 )
 
+// Application Version
 var Version string = "v1.0.0"
 
 func getEnv(key, defaultValue string) string {
