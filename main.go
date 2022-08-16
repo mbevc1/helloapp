@@ -24,7 +24,7 @@ const (
 	version = "v1.0.0"
 )
 
-// Application Version
+// Version
 var Version string = "v1.0.0"
 
 func getEnv(key, defaultValue string) string {
