@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 # vim:ft=dockerfile
-ARG VER=v1.0.4
+ARG VER=dev
 FROM golang:1.18.7
 ARG VER
 WORKDIR /go/src/github.com/mbevc1/helloapp/
