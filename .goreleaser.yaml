@@ -1,0 +1,61 @@
+project_name: helloapp
+
+source:
+  enabled: false
+
+env:
+  - GO111MODULE=on
+  #- GOPROXY=https://gocenter.io
+
+before:
+  hooks:
+    - go mod tidy
+    - go mod vendor
+
+builds:
+  - binary: helloapp
+    #main: ./main.go
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -v
+    #ldflags: -X github.com/mbevc1/helloapp/main.Version={{.Env.VERSION}}
+
+archives:
+  - id: helloapp
+    #builds:
+    #  - helloapp|default
+    format: zip
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    #replacements:
+    #  darwin: Darwin
+    #  linux: Linux
+    #  windows: Windows
+    #format: tar.gz
+    #format_overrides:
+    #  - goos: windows
+    #    format: zip
+    files:
+      - none*
+
+release:
+  prerelease: auto
+  draft: false
+  disable: false
+
+
+checksum:
+  #name_template: "{{ .ProjectName }}_{{ .Version }}_sha256_checksums.txt"
+  name_template: "{{ .ProjectName }}_checksums_sha256.txt"
+  algorithm: sha256
+
+changelog:
+  skip: false
+  #use: github
+  sort: asc
