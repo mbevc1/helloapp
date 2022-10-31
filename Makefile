@@ -52,6 +52,9 @@ docker-clean: ## Docker clean
 run:
 	go run .
 
+tidy:
+	go mod tidy
+
 dev: clean ## Dev test target
 	go build -ldflags "-s -w -X main.Version=${VER}" -o $(BIN)
 	upx $(BIN)
