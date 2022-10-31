@@ -2,7 +2,7 @@
 HelloApp is a demo example
 
 ## Application info
-Application is demonstration typical microservices workloads and is serving
+Application is a demonstration of a typical microservice workload and is serving
 HTTP traffic on port 8080. It's connecting to MySQL database and Redis cache
 cluster.
 
