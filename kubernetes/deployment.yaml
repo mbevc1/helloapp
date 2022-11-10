@@ -6,10 +6,17 @@ metadata:
   name: helloapp
   namespace: default
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: helloapp
       version: v1
+  strategy:
+    #type: Recreate
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
   template:
     metadata:
       labels:
