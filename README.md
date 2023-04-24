@@ -1,5 +1,5 @@
 [![HelloApp](https://github.com/mbevc1/helloapp/actions/workflows/tests.yml/badge.svg)](https://github.com/mbevc1/helloapp/actions/workflows/tests.yml)
-[![Publish Docker image](https://github.com/mbevc1/helloapp/actions/workflows/publish.yml/badge.svg)](https://github.com/mbevc1/helloapp/actions/workflows/publish.yml)
+[![Publish Docker image](https://github.com/mbevc1/helloapp/actions/workflows/publish.yml/badge.svg?event=release)](https://github.com/mbevc1/helloapp/actions/workflows/publish.yml)
 
 # helloapp
 HelloApp is a demo example
