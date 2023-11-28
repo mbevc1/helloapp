@@ -73,7 +73,8 @@ jobs:
     - name: Set up Go 1.x
       uses: actions/setup-go@v3
       with:
-        go-version: 'stable'
+        #go-version: 'stable'
+        go-version-file: 'go.mod'
         check-latest: true
       id: go
 
