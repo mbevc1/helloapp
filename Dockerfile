@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 # vim:ft=dockerfile
 ARG VER=dev
-FROM golang:1.20.7
+FROM golang:1.21.4
 ARG VER
 WORKDIR /go/src/github.com/mbevc1/helloapp/
 ENV CGO_ENABLED=0
