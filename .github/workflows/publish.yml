@@ -71,7 +71,7 @@ jobs:
       run: git fetch --prune --unshallow
 
     - name: Set up Go 1.x
-      uses: actions/setup-go@v3
+      uses: actions/setup-go@v4
       with:
         #go-version: 'stable'
         go-version-file: 'go.mod'
