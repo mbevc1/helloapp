@@ -1,3 +1,4 @@
+version: 2
 project_name: helloapp
 
 source:
@@ -56,6 +57,5 @@ checksum:
   algorithm: sha256
 
 changelog:
-  skip: false
   #use: github
   sort: asc
