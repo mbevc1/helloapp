@@ -16,7 +16,7 @@ jobs:
       contents: read
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Generate build tag
         run: |
@@ -29,19 +29,19 @@ jobs:
 
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: ${{ github.actor }}/helloapp
 
       - name: Log in to DockerHub
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v5
         with:
           context: .
           #push: true
@@ -65,13 +65,13 @@ jobs:
 #        args: release
 #      if: success()
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Unshallow
       run: git fetch --prune --unshallow
 
     - name: Set up Go 1.x
-      uses: actions/setup-go@v4
+      uses: actions/setup-go@v5
       with:
         #go-version: 'stable'
         go-version-file: 'go.mod'
@@ -79,7 +79,7 @@ jobs:
       id: go
 
     - name: Check out code into the Go module directory
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Generate build tag
       run: |
@@ -91,9 +91,9 @@ jobs:
       run: echo "${VERSION}"
 
     - name: Run GoReleaser
-      uses: goreleaser/goreleaser-action@v3
+      uses: goreleaser/goreleaser-action@v6
       with:
-        version: latest
+        version: '~> v2' # latest
         args: release --rm-dist
         workdir: .
       env:
