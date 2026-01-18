@@ -1,6 +1,6 @@
 module github.com/mbevc1/helloapp
 
-go 1.23
+go 1.24
 
 require (
 	github.com/go-redis/redis v6.15.9+incompatible
