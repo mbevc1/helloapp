@@ -82,7 +82,7 @@ func main() {
 	})
 
 	http.HandleFunc("/version", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, Version)
+		fmt.Fprintf(w, "%s", Version)
 		log.Println("Version request")
 	})
 
