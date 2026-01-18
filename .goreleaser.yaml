@@ -28,22 +28,26 @@ builds:
       - -v
     #ldflags: -X github.com/mbevc1/helloapp/main.Version={{.Env.VERSION}}
 
-archives:
-  - id: helloapp
-    #builds:
-    #  - helloapp|default
-    format: zip
-    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
-    #replacements:
-    #  darwin: Darwin
-    #  linux: Linux
-    #  windows: Windows
-    #format: tar.gz
-    #format_overrides:
-    #  - goos: windows
-    #    format: zip
-    files:
-      - none*
+upx:
+  - enabled: true
+    #goos: [linux, windows] # might break macOS
+
+#archives:
+#  - id: helloapp
+#    #builds:
+#    #  - helloapp|default
+#    formats: [ 'zip' ]
+#    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+#    #replacements:
+#    #  darwin: Darwin
+#    #  linux: Linux
+#    #  windows: Windows
+#    #formats: tar.gz
+#    #format_overrides:
+#    #  - goos: windows
+#    #    formatis: ['zip']
+#    files:
+#      - none*
 
 release:
   prerelease: auto
