@@ -1,10 +1,10 @@
 module github.com/mbevc1/helloapp
 
-go 1.25
+go 1.23
 
 require (
 	github.com/go-redis/redis v6.15.9+incompatible
-	github.com/go-sql-driver/mysql v1.8.1
+	github.com/go-sql-driver/mysql v1.9.3
 	github.com/stretchr/testify v1.9.0
 )
 
