@@ -4,7 +4,7 @@ go 1.25
 
 require (
 	github.com/go-redis/redis v6.15.9+incompatible
-	github.com/go-sql-driver/mysql v1.10.0
+	github.com/go-sql-driver/mysql v1.10.1
 	github.com/stretchr/testify v1.12.1
 )
 
